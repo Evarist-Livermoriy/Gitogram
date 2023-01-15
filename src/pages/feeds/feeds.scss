@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 921px;
+  width: 1198px;
+  height: 40px;
+  left: calc(50% - 1198px/2);
+  top: calc(50% - 40px/2 - 448.5px);
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 145px;
+  height: 37px;
+  order: 1;
+}
+
+.title {
+  width: 174px;
+  height: 40px;
+  color: #292929;
+}
+
+.home {
+  color: #262626;
+  width: 24px;
+  height: 25.14px;
+}
+
+.profile {
+  width: 37px;
+  height: 37px;
+}
+
+.shape {
+  color: #262626;
+  width: 25px;
+  height: 20.5px;
+}
+
+.stories {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 31px;
+  width: 1199px;
+  height: 116px;
+  left: 120px;
+  top: 127px;
+}
