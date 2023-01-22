@@ -11,10 +11,10 @@
               <icon name="home" />
             </div>
             <div class="profile">
-              <img src="../../../../img/Photo.png" />
+              <icon name="profile" />
             </div>
-            <div class="shape">
-              <icon name="shape" />
+            <div class="exit">
+              <icon name="exit" />
             </div>
           </div>
         </div>
@@ -22,20 +22,30 @@
       <template #content>
         <ul class="stories">
           <li class="stories-item" v-for="story in stories" :key="story.id">
-            <story-user-item :avatar="story.avatar" :username="story.username" @onPress="handlePress" />
+            <story-user-item :avatar="story.avatar" :username="story.username" />
           </li>
         </ul>
       </template>
     </topline>
   </div>
-  <toggler />
+
+  <ul class="feeds-list">
+    <li class="feeds-item feed" v-for="item in 5" :key="item">
+      <feed>
+        <template #card>
+          <card title="VUE.JS" desc="framework" stars="150" forks="4"/>
+        </template>
+      </feed>
+    </li>
+  </ul>
 </template>
 
 <script>
 import { topline } from '../../components/topline'
 import { icon } from '../../icons'
 import { storyUserItem } from '../../components/storyUserItem'
-import { toggler } from '../../components/toggler'
+import { feed } from '../../components/feed'
+import { card } from '../../components/card'
 import stories from './data.json'
 export default {
   name: 'feeds',
@@ -43,7 +53,8 @@ export default {
     topline,
     icon,
     storyUserItem,
-    toggler
+    feed,
+    card
   },
   data () {
     return {

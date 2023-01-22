@@ -1,34 +1,45 @@
 <template>
-  <div class="c-feed">
-    <toggler @onToggle="toggle"/>
-    <div class="comments" v-if="shown">
-      <ul class="comments-list">
-        <li class="comments-item" v-for="n in 5" :key="n">
-          <!-- <comment text="Some text" username="John Doe" /> -->
+  <div class="feed">
+    <div class="feed-user">
+      <avatar avatar="https://picsum.photos/200/300" class="feed-avatar"/>
+      <div class="feed-username">Username</div>
+    </div>
+
+    <div class="feed-card">
+      <slot name="card"></slot>
+    </div>
+
+    <div class="feed-toggler">
+      <toggler @onToggle="showComments" class="toggler"/>
+      <ul class="feed-comment-list" v-show="isShownComment">
+        <li class="feed-comment-item comment" v-for="item in 5" :key="item">
+          <comment username="James" text="Hello" />
         </li>
       </ul>
     </div>
+
+    <div class="feed-date">15 may</div>
   </div>
 </template>
 
 <script>
-// import { comment } from '../comment'
+import { avatar } from '../avatar'
 import { toggler } from '../toggler'
-
+import { comment } from '../comment'
 export default {
-  name: 'feed-item',
   components: {
-    toggler
-    // comment
+    avatar,
+    toggler,
+    comment
   },
   data () {
     return {
-      shown: false
+      isShownComment: false
     }
   },
   methods: {
-    toggle (isOpened) {
-      this.shown = isOpened
+    showComments (state) {
+      this.isShownComment = state
     }
   }
 }

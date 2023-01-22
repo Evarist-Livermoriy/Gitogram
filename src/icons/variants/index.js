@@ -1,2 +1,6 @@
 export { default as home } from './home.vue'
-export { default as shape } from './shape.vue'
+export { default as exit } from './exit.vue'
+export { default as triangle } from './triangle.vue'
+export { default as profile } from './profile.vue'
+export { default as star } from './star.vue'
+export { default as fork } from './fork.vue'

@@ -1,0 +1,26 @@
+.feed {
+  &-user {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-avatar {
+    margin-right: 16px;
+  }
+
+  &-username {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &-date {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.toggler {
+  margin-bottom: 12px;
+}

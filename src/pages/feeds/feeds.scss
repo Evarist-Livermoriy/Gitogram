@@ -38,7 +38,7 @@
   height: 37px;
 }
 
-.shape {
+.exit {
   color: #262626;
   width: 25px;
   height: 20.5px;
@@ -54,4 +54,24 @@
   height: 116px;
   left: 120px;
   top: 127px;
+}
+
+.feeds {
+  &-list {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.feed {
+  margin-bottom: 24px;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
